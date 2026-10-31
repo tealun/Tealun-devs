@@ -66,9 +66,9 @@ a:hover { text-decoration-thickness: 2px; }
   color: var(--teal);
   padding-top: 0.15em;
 }
-.cover__body { max-width: 44em; padding-bottom: 8px; }
+.cover__body { max-width: 48em; padding-bottom: 8px; }
 .cover__text { max-width: var(--measure); }
-.cover__lead { font: 600 clamp(24px, 2.6vw, 34px)/1.5 var(--serif); margin: 0 0 20px; }
+.cover__lead { font: 600 clamp(24px, 2.6vw, 34px)/1.5 var(--serif); margin: 0 0 20px; text-wrap: pretty; }
 .cover__text { color: var(--ink-soft); margin: 0 0 40px; }
 .cover__quote {
   margin: 0; padding: 18px 0 0;
