@@ -76,7 +76,7 @@ const html = `<!doctype html>
 
 <main>
 <section class="cover" aria-labelledby="cover-title">
-  <h1 class="cover__title" id="cover-title"><span class="cover__alias">${esc(p.alias)}</span><span class="cover__name">${esc(p.name)}</span></h1>
+  <h1 class="cover__title" id="cover-title"><span class="cover__name">${esc(p.name)}</span><span class="cover__alias">${esc(p.alias)}</span></h1>
   <div class="cover__body">
     <p class="cover__lead">${lines(p.lead)}</p>
     <p class="cover__text">${esc(p.intro)}</p>
