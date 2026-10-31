@@ -66,7 +66,8 @@ a:hover { text-decoration-thickness: 2px; }
   color: var(--teal);
   padding-top: 0.15em;
 }
-.cover__body { max-width: var(--measure); padding-bottom: 8px; }
+.cover__body { max-width: 44em; padding-bottom: 8px; }
+.cover__text { max-width: var(--measure); }
 .cover__lead { font: 600 clamp(24px, 2.6vw, 34px)/1.5 var(--serif); margin: 0 0 20px; }
 .cover__text { color: var(--ink-soft); margin: 0 0 40px; }
 .cover__quote {
@@ -149,7 +150,10 @@ a:hover { text-decoration-thickness: 2px; }
 }
 
 .works > *, .method > *, .about > * { min-width: 0; }
-.minor { margin-top: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(24px, 4vw, 64px); }
+.minor { margin-top: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(32px, 4vw, 56px) clamp(24px, 3vw, 48px); }
+.minor__item { border-top: 1px solid var(--rule); padding-top: 18px; }
+.minor__sub { margin: -4px 0 10px; font-size: 14px; color: var(--teal); }
+.work__tech { margin: 12px 0 0; font-size: 14px; color: var(--ink-soft); }
 .minor__name { margin: 0 0 10px; font: 700 26px/1.3 var(--serif); }
 .minor__item p { margin: 0; color: var(--ink-soft); }
 .minor__item .work__links, .minor__item .work__state { margin-top: 14px; }
@@ -174,7 +178,7 @@ a:hover { text-decoration-thickness: 2px; }
 
 /* Tablet */
 @media (max-width: 960px) {
-  .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .steps, .minor { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .work { grid-template-columns: 1fr; }
 }
 

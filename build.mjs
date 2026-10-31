@@ -14,6 +14,7 @@ site.works.forEach((w, i) => need(w, ['size', 'name', 'what'], `works[${i}]`));
 const STATUS = { live: '已上线', dev: '开发中', open: '开源' };
 const status = w => w.status ? `<p class="work__state${w.status === 'live' ? ' work__state--live' : ''}">${STATUS[w.status] ?? esc(w.status)}</p>` : '';
 const links = w => w.links?.length ? `<p class="work__links">${w.links.map(l => `<a href="${esc(l.url)}">${esc(l.label)}</a>`).join('')}</p>` : '';
+const tech = w => w.tech ? `<p class="work__tech">技术：${esc(w.tech)}</p>` : '';
 const facts = w => w.facts?.length ? `<dl class="work__facts">${w.facts.map(f => `<div><dt>${esc(f.label)}</dt><dd>${esc(f.value)}</dd></div>`).join('')}</dl>` : '';
 
 const work = w => `
@@ -28,6 +29,7 @@ const work = w => `
       ${facts(w)}
       ${w.code ? `<pre class="work__code"><code>${w.code.map(esc).join('\n')}</code></pre>` : ''}
       ${w.note ? `<p class="work__note">${esc(w.note)}</p>` : ''}
+      ${tech(w)}
       ${links(w)}
     </div>
   </article>`;
@@ -35,7 +37,9 @@ const work = w => `
 const minor = w => `
     <article class="minor__item">
       <h3 class="minor__name">${esc(w.name)}</h3>
+      ${w.subtitle ? `<p class="minor__sub">${esc(w.subtitle)}</p>` : ''}
       <p>${esc(w.what)}</p>
+      ${tech(w)}
       ${links(w)}${status(w)}
     </article>`;
 
