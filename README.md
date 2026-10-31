@@ -1,12 +1,26 @@
 # dev.tealun.com
 
-Tealun 的项目集网站。纯静态页面，没有构建步骤，部署在 Cloudflare Pages。
+Tealun 摆渡人的项目集网站，部署在 Cloudflare Pages。
 
-- `index.html`：全部内容
-- `styles.css`：样式（不加载外部字体，保证国内访问速度）
-- `favicon.svg`、`_headers`（Cloudflare Pages 的安全响应头）
+- `content/site.json`：全部文字和数据（个人信息、作品、方法、联系方式）。改内容只改这里。
+- `src/`：样式、图标、Cloudflare 安全响应头。
+- `build.mjs`：把 `content/site.json` 生成为 `dist/index.html`，无需安装依赖。
 
-## 部署
+## 本地预览
 
-Cloudflare Pages 连接本仓库：构建命令留空，输出目录填 `/`。推送到 `main` 即自动发布。
-自定义域名：在 Pages 项目的 Custom domains 里添加 `dev.tealun.com`。
+```bash
+node build.mjs
+# 然后用浏览器打开 dist/index.html
+```
+
+## 部署（Cloudflare Pages）
+
+- 构建命令：`node build.mjs`
+- 输出目录：`dist`
+- 自定义域名：`dev.tealun.com`
+
+推送到 `main` 即自动发布。
+
+## 作品字段
+
+`works` 里每一项：`size`（`lead` 主打、`normal` 常规、`tool` 开源工具、`minor` 次要）、`name`、`subtitle`、`status`（`live` 已上线、`dev` 开发中、`open` 开源）、`what`、`facts`（标签与数值）、`note`、`code`、`links`。改了数字记得更新 `dataAsOf`。

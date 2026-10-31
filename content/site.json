@@ -1,0 +1,94 @@
+{
+  "person": {
+    "name": "Tealun",
+    "alias": "摆渡人",
+    "lead": ["我是品牌设计师，不写代码。", "过去半年，我用 AI 做出了六个产品。"],
+    "intro": "这里放着它们，以及我让 AI 稳定做对事情的那套方法。每一句话，都能在代码仓库里找到出处。",
+    "quote": ["以前是手跟不上脑子，", "现在是脑子跟不上手。"],
+    "about": [
+      "我叫 Tealun，在 X 上叫摆渡人。品牌设计出身，会写一点 PHP，读不懂 AI 写的大部分代码。",
+      "我想证明一件事：不写代码的人，也能用 AI 把东西做成，而且做稳。方法在上面，技能是开源的，欢迎拿去用，也欢迎来聊。"
+    ],
+    "contacts": [
+      { "label": "X @TealunDu", "url": "https://x.com/TealunDu" },
+      { "label": "GitHub @tealun", "url": "https://github.com/tealun" },
+      { "label": "Telegram 群", "url": "https://t.me/MoreadChat" }
+    ]
+  },
+  "dataAsOf": "2026 年 10 月",
+  "works": [
+    {
+      "size": "lead",
+      "name": "沫读",
+      "subtitle": "Moread",
+      "status": "live",
+      "what": "英语精读微信小程序。每天一个番茄钟，七天精读一篇 AI 生成的文章，按水平自动调整难度。",
+      "facts": [
+        { "label": "注册用户", "value": "800+" },
+        { "label": "审计报告", "value": "120 份" },
+        { "label": "写代码前的文档审计", "value": "5 轮" }
+      ],
+      "note": "我最早也是最久的产品。一位免费用户白用了十周，我从后台数据里看出不对，带着 AI 查出了扣费漏洞。",
+      "links": [{ "label": "moread.ink", "url": "https://moread.ink" }]
+    },
+    {
+      "size": "normal",
+      "name": "Kelibron",
+      "subtitle": "三维精密测量实训室",
+      "status": "live",
+      "what": "浏览器里的三维实训室。拿游标卡尺、千分尺去量真实尺寸的零件，读数和判定都按计量规则来。",
+      "facts": [
+        { "label": "经验账本", "value": "70 条" },
+        { "label": "测试文件", "value": "64 个" }
+      ],
+      "note": "从这个项目里提炼出了开源技能 Labsmith，教 AI 做“测得准、讲得对”的行业实训室。",
+      "links": [
+        { "label": "kelibron.com", "url": "https://kelibron.com" },
+        { "label": "Labsmith 技能", "url": "https://github.com/tealun/labsmith" }
+      ]
+    },
+    {
+      "size": "normal",
+      "name": "Tiko.day",
+      "subtitle": "AI 日程助手",
+      "status": "live",
+      "what": "建在 Google 日历和任务之上的日程助手。一句话录入，AI 只提议，写入都要你确认。",
+      "facts": [
+        { "label": "从建仓库到上线", "value": "10 天" },
+        { "label": "前 13 次提交", "value": "全是文档" },
+        { "label": "端到端测试", "value": "54 组" }
+      ],
+      "links": [{ "label": "tiko.day", "url": "https://tiko.day" }]
+    },
+    {
+      "size": "tool",
+      "name": "Tealun-Skills",
+      "subtitle": "开源技能包",
+      "status": "open",
+      "what": "上面这些项目背后的工作方法，整理成五个 AI 技能。装进 Claude Code、Codex、Cursor 等工具，让 AI 少一点“我以为我做了”，多一点“我证明我做到了”。",
+      "code": ["/plugin marketplace add tealun/Tealun-Skills", "/plugin install tealun-skills@tealun-skills"],
+      "links": [{ "label": "在 GitHub 查看", "url": "https://github.com/tealun/Tealun-Skills" }]
+    },
+    {
+      "size": "minor",
+      "name": "名片 SaaS",
+      "what": "企业电子名片平台。前 18 次提交没有一行产品代码，文档审计在写代码前就查出了一个不用登录就能写入个人信息的接口。",
+      "links": [{ "label": "在 GitHub 查看", "url": "https://github.com/tealun/business-card-saas" }]
+    },
+    {
+      "size": "minor",
+      "name": "一个小游戏",
+      "status": "dev",
+      "what": "开发中的微信小游戏。写第一行代码之前，规划文档已经审了三轮。名字暂不公开。"
+    }
+  ],
+  "method": {
+    "intro": "每个项目都走同样的四步。每一步由一个技能把关，AI 每次开工都会照着做。",
+    "steps": [
+      { "name": "规划", "skills": "Planner 与 Auditor", "text": "先和 AI 把需求聊透，写成一套给 AI 看的文档，再审计这份规划。我读完觉得能实施，它才能写代码。" },
+      { "name": "搭框架", "skills": "Tasker 与 Bugfixer", "text": "先定技术、数据库、部署方式和模块之间的约定。地基打牢，AI 才不会到处另起炉灶。" },
+      { "name": "做功能", "skills": "Tasker、Bugfixer 与 Auditor", "text": "做一个功能，审一轮。没有证据不许说完成，没复现不许修 bug，审计用不同模型交叉做。" },
+      { "name": "沉淀", "skills": "Evolver", "text": "每个踩过的坑都写进经验账本，变成测试或规则。同一个坑，只踩一次。" }
+    ]
+  }
+}
