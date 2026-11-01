@@ -13,13 +13,14 @@ node build.mjs
 # 然后用浏览器打开 dist/index.html
 ```
 
-## 部署（Cloudflare Pages）
+## 部署（Cloudflare Workers）
 
+- 根目录：`/`（留空）
 - 构建命令：`node build.mjs`
-- 输出目录：`dist`
+- 部署命令：`npx wrangler deploy`（读取 `wrangler.jsonc`，发布 `dist/` 里的静态文件）
 - 自定义域名：`dev.tealun.com`
 
-推送到 `main` 即自动发布。
+`wrangler.jsonc` 里的 `name` 要和 Cloudflare 后台的 Worker 名称一致。推送到 `main` 即自动发布。
 
 ## 作品字段
 

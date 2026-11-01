@@ -1,0 +1,9 @@
+{
+  // Cloudflare Workers static assets. Build: `node build.mjs`, deploy: `npx wrangler deploy`.
+  // "name" must match the Worker's name in the Cloudflare dashboard.
+  "name": "tealun-devs",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist"
+  }
+}
