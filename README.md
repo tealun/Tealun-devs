@@ -13,14 +13,12 @@ node build.mjs
 # 然后用浏览器打开 dist/index.html
 ```
 
-## 部署（Cloudflare Workers）
+## 部署（自有服务器）
 
-- 根目录：`/`（留空）
-- 构建命令：`node build.mjs`
-- 部署命令：`npx wrangler deploy`（读取 `wrangler.jsonc`，发布 `dist/` 里的静态文件）
-- 自定义域名：`dev.tealun.com`
+1. 运行 `node build.mjs`，生成 `dist/`。
+2. 把 `dist/` 里的全部文件上传到服务器上 `dev.tealun.com` 站点的网站根目录，覆盖旧文件。
 
-`wrangler.jsonc` 里的 `name` 要和 Cloudflare 后台的 Worker 名称一致。推送到 `main` 即自动发布。
+`dist/_headers` 是 Cloudflare 专用的安全响应头文件，普通服务器不会读取，上传时可以不传；需要的话把同样的响应头写进 nginx 配置。
 
 ## 作品字段
 
